@@ -1,0 +1,5 @@
+# 1. Derlenmiş Çalıştırılabilir Dosyalar (Asla GitHub'a atılmaz)
+*.exe
+*.o
+*.out
+bin/

@@ -1,0 +1,1 @@
+g++ decoder.cpp -o decoder.exe

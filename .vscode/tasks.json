@@ -5,11 +5,14 @@
             "label": "C/C++: gcc.exe build active file",
             "command": "C:\\Program Files\\gcc\\bin\\g++.exe",
             "args": [
-                "-fdiagnostics-color=always",
+                            "-fdiagnostics-color=always",
                 "-g",
-               "${fileDirname}\\*.cpp",
+                "-I${workspaceFolder}\\vendor",
+                "-I${workspaceFolder}\\include",
+                "${fileDirname}\\*.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
+
             ],
             "options": {
                 "cwd": "${fileDirname}"

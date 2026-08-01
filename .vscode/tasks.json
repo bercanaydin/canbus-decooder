@@ -2,24 +2,26 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc.exe build active file",
-            "command": "C:\\Program Files\\gcc\\bin\\g++.exe",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
             "args": [
-                            "-fdiagnostics-color=always",
+                "-fdiagnostics-color=always",
                 "-g",
                 "-I${workspaceFolder}\\vendor",
                 "-I${workspaceFolder}\\include",
+                "-IC:\\msys64\\ucrt64\\include\\SDL2",
                 "${fileDirname}\\*.cpp",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-LC:\\msys64\\ucrt64\\lib",
+                "-lmingw32",
+                "-lSDL2main",
+                "-lSDL2"
             ],
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "problemMatcher": ["$gcc"],
             "group": {
                 "kind": "build",
                 "isDefault": true

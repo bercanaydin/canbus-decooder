@@ -34,5 +34,5 @@ Follow these steps to build the project locally on your machine:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/canbusdecooder.git](https://github.com/YOUR_USERNAME/canbusdecooder.git)
+   git clone [https://github.com/bercanaydin/canbusdecooder.git](https://github.com/bercanaydin/canbusdecooder.git)
    cd canbusdecooder

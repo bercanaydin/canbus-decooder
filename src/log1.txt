@@ -1,0 +1,21 @@
+In file included from C:\msys64\ucrt64\include/SDL2/SDL_cpuinfo.h:78,
+                 from C:\msys64\ucrt64\include/SDL2/SDL.h:37,
+                 from main.cpp:4:
+C:\msys64\ucrt64\include/intrin.h:525:78: warning: 'int _setjmp(_JBTYPE*, void*)' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+  525 |     __MACHINEX64(int __cdecl __attribute__ ((__nothrow__,__returns_twice__)) _setjmp(jmp_buf,void *))
+      |                                                                              ^~~~~~~
+C:\msys64\ucrt64\include/intrin.h:172:22: note: in definition of macro '__MACHINE'
+  172 | #define __MACHINE(X) X;
+      |                      ^
+C:\msys64\ucrt64\include/intrin.h:525:5: note: in expansion of macro '__MACHINEX64'
+  525 |     __MACHINEX64(int __cdecl __attribute__ ((__nothrow__,__returns_twice__)) _setjmp(jmp_buf,void *))
+      |     ^~~~~~~~~~~~
+C:\msys64\ucrt64\include/intrin.h:527:78: warning: 'int _setjmpex(_JBTYPE*, void*)' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+  527 |     __MACHINEX64(int __cdecl __attribute__ ((__nothrow__,__returns_twice__)) _setjmpex(jmp_buf,void *))
+      |                                                                              ^~~~~~~~~
+C:\msys64\ucrt64\include/intrin.h:172:22: note: in definition of macro '__MACHINE'
+  172 | #define __MACHINE(X) X;
+      |                      ^
+C:\msys64\ucrt64\include/intrin.h:527:5: note: in expansion of macro '__MACHINEX64'
+  527 |     __MACHINEX64(int __cdecl __attribute__ ((__nothrow__,__returns_twice__)) _setjmpex(jmp_buf,void *))
+      |     ^~~~~~~~~~~~

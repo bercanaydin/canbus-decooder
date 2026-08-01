@@ -30,6 +30,12 @@ int main(int, char**) {
 
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;
+
+
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard; 
+    
+   
+    ImGuiStyle& style = ImGui::GetStyle();
     ImGui_ImplSDL2_InitForOpenGL(window, gl_context);
     ImGui_ImplOpenGL3_Init("#version 130");
 
@@ -62,8 +68,13 @@ int main(int, char**) {
 
         dashboard.render(car_state);
 
-        ImGui::Render();
-        glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
+       ImGui::Render();
+        
+      
+        int display_w, display_h;
+        SDL_GL_GetDrawableSize(window, &display_w, &display_h);
+        glViewport(0, 0, display_w, display_h);
+
         glClearColor(0.04f, 0.06f, 0.10f, 1.0f); 
         glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

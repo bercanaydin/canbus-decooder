@@ -1,8 +1,8 @@
-# 🚗 Automotive ECU CAN-BUS Decoder & HMI Digital Dashboard
+#  Automotive ECU CAN-BUS Decoder & HMI Digital Dashboard
 
 A real-time **Human-Machine Interface (HMI)** and **CAN-Bus Data Decoder** simulation system developed using modern C++ (C++20), **SDL2**, and **Dear ImGui**. This software parses raw CAN data packets from an ECU and visualizes them on a digital dashboard (RPM, Speed, Temperature, and Hardware Warnings).
 
-## 📸 Screenshot
+##  Screenshot
 
 <div align="center">
   <img src="assets/hmi_preview.png" alt="Automotive HMI Interface" width="800"/>
@@ -10,7 +10,7 @@ A real-time **Human-Machine Interface (HMI)** and **CAN-Bus Data Decoder** simul
 
 ---
 
-## 🚀 Features
+##  Features
 
 * **Real-Time CAN Data Processing:** Reads ECU data to dynamically decode vehicle parameters.
 * **Modern Vector HMI Interface:** Clean, hardware-accelerated digital gauges powered by ImGui.
@@ -19,7 +19,7 @@ A real-time **Human-Machine Interface (HMI)** and **CAN-Bus Data Decoder** simul
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 * **Language:** C++20
 * **GUI Library:** Dear ImGui
@@ -28,7 +28,7 @@ A real-time **Human-Machine Interface (HMI)** and **CAN-Bus Data Decoder** simul
 
 ---
 
-## ⚙️ Installation & Building (Windows / MinGW)
+##  Installation & Building (Windows / MinGW)
 
 Follow these steps to build the project locally on your machine:
 

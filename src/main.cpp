@@ -34,7 +34,11 @@ int main(int, char**) {
 
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard; 
     
-   
+   ImFont* font = io.Fonts->AddFontFromFileTTF("../assets/font/montserrat/NeueMontreal-Medium.otf", 20.0f);
+    if (font == nullptr) {
+        // Eğer dosya bulunamazsa veya adında hata olursa varsayılan fonta düşer
+        io.Fonts->AddFontDefault();
+    }
     ImGuiStyle& style = ImGui::GetStyle();
     ImGui_ImplSDL2_InitForOpenGL(window, gl_context);
     ImGui_ImplOpenGL3_Init("#version 130");

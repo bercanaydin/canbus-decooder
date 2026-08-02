@@ -32,19 +32,18 @@ private:
         ImGui::Separator();
         ImGui::Spacing();
 
-        float buttons_total_width = 220.0f;
+        float buttons_total_width = 420.0f;
         ImGui::SetCursorPosX((window_width - buttons_total_width) * 0.5f);
         
-        if (ImGui::Button("Gosterge Paneli", ImVec2(100, 30))) {
-            current_tab = ActiveTab::Dashboard;
-        }
+        if (ImGui::Button("Gosterge Paneli", ImVec2(100, 30)) || ImGui::IsKeyPressed(ImGuiKey_A))    current_tab = ActiveTab::Dashboard;
+        
         ImGui::SameLine(0, 20);
         if (ImGui::Button("Klima Kontrol", ImVec2(100, 30)) || ImGui::IsKeyPressed(ImGuiKey_D))     current_tab = ActiveTab::Climate;
         
-
-        if (ImGui::IsKeyPressed(ImGuiKey_A)  || ImGui::IsKeyPressed(ImGuiKey_A))     current_tab = ActiveTab::Dashboard;
+ImGui::SameLine(0, 20);
         
         
+        if(ImGui::Button("close", ImVec2(100, 30)) || ImGui::IsKeyPressed(ImGuiKey_Escape))    ImGui::End();
         ImGui::Spacing();
         ImGui::Separator();
         ImGui::Spacing();

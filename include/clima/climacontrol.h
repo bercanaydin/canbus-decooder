@@ -9,12 +9,12 @@ class ClimaControl
 {
 public:
    uint32_t   control;
-    float cabin_tempeerature;
+    float cabin_temperature;
     bool ac_status;
 
     ClimaControl(){
         control = 0;
-        cabin_tempeerature = 0.0f;
+        cabin_temperature = 0.0f;
         ac_status = true;
     }
    

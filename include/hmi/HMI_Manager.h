@@ -24,7 +24,7 @@ private:
 
     ActiveTab current_tab;
 
-    void render_top_navigation() {
+    void render_top_navigation(bool* p_open) {
         float window_width = ImGui::GetWindowSize().x;
         
         std::string title = "HMI SYSTEM";
@@ -48,7 +48,7 @@ private:
 ImGui::SameLine(0, 20);
         
         
-        if(ImGui::Button("close", ImVec2(100, 30)) || ImGui::IsKeyPressed(ImGuiKey_Escape))    ImGui::End();
+        if(ImGui::Button("close", ImVec2(100, 30)) || ImGui::IsKeyPressed(ImGuiKey_Escape))    *p_open = false;;
         ImGui::Spacing();
         ImGui::Separator();
         ImGui::Spacing();
@@ -72,13 +72,13 @@ public:
         colors[ImGuiCol_ButtonHovered] = ImVec4(0.25f, 0.40f, 0.65f, 1.00f);
     }
 
-    void render(const VehicleState& car_state, ClimaControl& climate) {
+    void render(const VehicleState& car_state, ClimaControl& climate, bool* p_open) {
         ImGui::SetNextWindowPos(ImVec2(0, 0));
         ImGui::SetNextWindowSize(ImGui::GetIO().DisplaySize);
         
         ImGui::Begin("DashboardManager", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove);
 
-        render_top_navigation();
+        render_top_navigation(p_open);
 
        switch (current_tab)
        {

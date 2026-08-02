@@ -7,16 +7,19 @@
 #include "HMI_Components.h"
 #include "pages/DashboardPage.h"
 #include "pages/ClimatePage.h"
+#include "pages/musicpage.h"
 #include <string>
 
 class HMI_Manager {
 private:
     DashboardPage dashboard_page; 
-    ClimatePage climate_page;     
+    ClimatePage climate_page;  
+    MusicPage music_page;   
    
     enum class ActiveTab {
         Dashboard,
-        Climate
+        Climate,
+        MusicPage
     };
 
     ActiveTab current_tab;
@@ -39,6 +42,8 @@ private:
         
         ImGui::SameLine(0, 20);
         if (ImGui::Button("Klima Kontrol", ImVec2(100, 30)) || ImGui::IsKeyPressed(ImGuiKey_D))     current_tab = ActiveTab::Climate;
+        ImGui::SameLine(0, 20);
+        if (ImGui::Button("music", ImVec2(100, 30)) || ImGui::IsKeyPressed(ImGuiKey_F))     current_tab = ActiveTab::MusicPage;
         
 ImGui::SameLine(0, 20);
         
@@ -75,12 +80,19 @@ public:
 
         render_top_navigation();
 
+       switch (current_tab)
+       {
+       case ActiveTab::Dashboard:  dashboard_page.render(car_state);
+        break;
+       case ActiveTab::Climate:    climate_page.render(climate);
+        break;
+       case ActiveTab::MusicPage: music_page.render("dffggf");
+        /* code */
+        break;
        
-        if (current_tab == ActiveTab::Dashboard) {
-            dashboard_page.render(car_state);
-        } else if (current_tab == ActiveTab::Climate) {
-            climate_page.render(climate);
-        }
+      
+       }
+       
 
         ImGui::End();
     }

@@ -46,6 +46,10 @@ private:
         if (ImGui::Button("Klima Kontrol", ImVec2(100, 30))) {
             current_tab = ActiveTab::Climate;
         }
+
+        if(ImGui::IsKeyPressed(ImGuiKey_A)) {
+            current_tab = ActiveTab::Dashboard;
+        }
         
         ImGui::Spacing();
         ImGui::Separator();

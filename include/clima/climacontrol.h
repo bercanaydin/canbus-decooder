@@ -12,7 +12,7 @@ public:
     float cabin_tempeerature;
     bool ac_status;
 
-    Climacontrol(){
+    ClimaControl(){
         control = 0;
         cabin_tempeerature = 0.0f;
         ac_status = true;

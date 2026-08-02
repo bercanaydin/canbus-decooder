@@ -2,7 +2,7 @@
 #define CLIMATE_PAGE_H
 
 #include "imgui.h"
-#include "climacontrol.h"
+#include "../../clima/climacontrol.h"
 #include <string>
 #include <cstdio>
 

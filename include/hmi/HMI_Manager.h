@@ -3,10 +3,10 @@
 
 #include "imgui.h"
 #include "VehicleData.h"
-#include "climacontrol.h" 
+#include "../clima/climacontrol.h"
 #include "HMI_Components.h"
-#include "DashboardPage.h"
-#include "ClimatePage.h"
+#include "pages/DashboardPage.h"
+#include "pages/ClimatePage.h"
 #include <string>
 
 class HMI_Manager {
@@ -15,7 +15,7 @@ private:
 
     DashboardPage dashboard_page;
     ClimatePage climate_page;
-    // Aktif sayfa/sekme takibi için enum (İleride yeni sayfalar ekleyebilirsin)
+   
     enum class ActiveTab {
         Dashboard,
         Climate
@@ -35,7 +35,7 @@ private:
         ImGui::Separator();
         ImGui::Spacing();
 
-        // Sayfa Değiştirme Butonları (Sekmeler)
+       
         float buttons_total_width = 220.0f;
         ImGui::SetCursorPosX((window_width - buttons_total_width) * 0.5f);
         

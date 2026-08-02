@@ -20,16 +20,16 @@ public:
         ImGui::Spacing();
         ImGui::Spacing();
 
-        // Hedef Sıcaklık Bilgisi
+        
         char clima_buf[64];
-        snprintf(clima_buf, sizeof(clima_buf), "Hedef Kabin Sicakligi: %.1f C", climate.cabin_temperature);
+        snprintf(clima_buf, sizeof(clima_buf), "Target tempe: %.1f C", climate.cabin_temperature);
         float c_width = ImGui::CalcTextSize(clima_buf).x;
         ImGui::SetCursorPosX((window_width - c_width) * 0.5f);
         ImGui::Text("%s", clima_buf);
 
         ImGui::Spacing();
 
-        // Klima Durumu
+      
         std::string ac_status = climate.ac_status ? "Klima Durumu: AKTIF (Sogutuyor)" : "Klima Durumu: KAPALI";
         float ac_width = ImGui::CalcTextSize(ac_status.c_str()).x;
         ImGui::SetCursorPosX((window_width - ac_width) * 0.5f);

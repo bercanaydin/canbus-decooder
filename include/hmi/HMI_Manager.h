@@ -26,8 +26,8 @@ private:
     void render_top_navigation() {
         float window_width = ImGui::GetWindowSize().x;
         
-        // Üst Başlık
-        std::string title = "OTONOM HMI SISTEMI";
+        
+        std::string title = "HMI SYSTEM";
         float title_width = ImGui::CalcTextSize(title.c_str()).x;
         ImGui::SetCursorPosX((window_width - title_width) * 0.5f);
         ImGui::Text("%s", title.c_str());

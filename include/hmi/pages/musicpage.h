@@ -11,6 +11,7 @@ class MusicPage{
 public:
 
     void render(std::string name){
+        printf("music page");
         std::string header = "MUSIC PAGE";
          ImGui::Text("%s", name.c_str());
     

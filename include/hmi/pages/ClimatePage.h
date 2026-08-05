@@ -40,6 +40,11 @@ public:
         ClimatePage::beton();
         ImGui::PopStyleColor();
     };
+
+
+    void renderall(){
+        
+    }
     void beton(){
         printf("beton");
     };

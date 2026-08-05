@@ -36,9 +36,16 @@ public:
         
         ImGui::PushStyleColor(ImGuiCol_Text, climate.ac_status ? ImVec4(0.2f, 0.8f, 1.0f, 1.0f) : ImVec4(0.6f, 0.6f, 0.6f, 1.0f));
         ImGui::Text("%s", ac_status.c_str());
-        ImGui::Text("%s", ac_status.c_str);
+        ImGui::Text("%s", ac_status.c_str());
+        ClimatePage::beton();
         ImGui::PopStyleColor();
-    }
+    };
+    void beton(){
+        printf("beton");
+    };
+
+
+
 };
 
 #endif

@@ -12,7 +12,7 @@ public:
         float window_width = ImGui::GetWindowSize().x;
         
         // Sayfa Başlığı
-        std::string header = "KABIN IKLIMLENDIRME YONETIMI";
+        std::string header = "termo";
         float h_width = ImGui::CalcTextSize(header.c_str()).x;
         ImGui::SetCursorPosX((window_width - h_width) * 0.5f);
         ImGui::Text("%s", header.c_str());
@@ -30,12 +30,13 @@ public:
         ImGui::Spacing();
 
       
-        std::string ac_status = climate.ac_status ? "Klima Durumu: AKTIF (Sogutuyor)" : "Klima Durumu: KAPALI";
+        std::string ac_status = climate.ac_status ? "Klima Durumu: açık" : "Klima Durumu: KAPALI";
         float ac_width = ImGui::CalcTextSize(ac_status.c_str()).x;
         ImGui::SetCursorPosX((window_width - ac_width) * 0.5f);
         
         ImGui::PushStyleColor(ImGuiCol_Text, climate.ac_status ? ImVec4(0.2f, 0.8f, 1.0f, 1.0f) : ImVec4(0.6f, 0.6f, 0.6f, 1.0f));
         ImGui::Text("%s", ac_status.c_str());
+        ImGui::Text("%s", ac_status.c_str);
         ImGui::PopStyleColor();
     }
 };
